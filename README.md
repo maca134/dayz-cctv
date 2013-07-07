@@ -102,6 +102,7 @@ The script uses 2 models to calculate where the CCTV should be.
 
 Notebooks are used to activate the system. In the editor they are found at __Object (small) -> Notebook__
 [logo]: https://dl.dropboxusercontent.com/u/135243/Dump/notebook.jpg "Notebook"
+![Notebook](https://dl.dropboxusercontent.com/u/135243/Dump/notebook.jpg)
 
 Loudspeaks are used as camera points. In the editor they are found at __Object (small) -> Loudspeaker__
-[logo]: https://dl.dropboxusercontent.com/u/135243/Dump/loudspeaker.jpg "Loudspeaker"
+![Loudspeaker](https://dl.dropboxusercontent.com/u/135243/Dump/loudspeaker.jpg)
