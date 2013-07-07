@@ -3,6 +3,7 @@ DayZ CCTV
 
 Hey, here is a simple script to use in ARMA 2/DayZ. I have only tested it in Epoch at the moment.
 I have added the commits to the repo to highlight the installtion process.
+I have included all the files for Epoch 1.0.1.4 with the CCTV script ready to go for either reference or to use.
 
 ## Instructions
 
@@ -92,5 +93,3 @@ The script only needs 1 filter exception. Although this exception will probably 
 ```
 5 SetCamUseTi !"\"SetCamUseTi\"," !"cctv\init.sqf","
 ```
-
-
