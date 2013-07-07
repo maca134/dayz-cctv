@@ -552,6 +552,19 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		};
 	};
 
+	/////////////////////////////
+	// CCTV Custom self actions
+	_isLaptop = _cursorTarget isKindOf "Notebook";
+	if (_isLaptop && _canDo) then {
+		if (s_player_laptop < 0) then {
+			s_player_laptop = player addAction ["Activate Laptop", "cctv\init.sqf",_cursorTarget, 1, true, true, "", ""];
+		}
+	} else {
+		player removeAction s_player_laptop;
+		s_player_laptop = -1;
+	};
+	/////////////////////////////
+
 } else {
 	//Engineering
 	{dayz_myCursorTarget removeAction _x} forEach s_player_repairActions;s_player_repairActions = [];
@@ -625,6 +638,12 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	s_player_fillgen = -1;
 	player removeAction s_player_fuelauto;
 	s_player_fuelauto = -1;
+
+	/////////////////////////////
+	// CCTV Custom self actions
+	player removeAction s_player_laptop;
+	s_player_laptop = -1;
+	/////////////////////////////
 };
 
 
