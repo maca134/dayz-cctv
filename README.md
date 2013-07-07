@@ -5,12 +5,13 @@ Hey, here is a simple script to use in ARMA 2/DayZ. I have only tested it in Epo
 I have added the commits to the repo to highlight the installtion process.
 I have included all the files for Epoch 1.0.1.4 with the CCTV script ready to go for either reference or to use.
 
-## Instructions
+## Installation Instructions
 
 ### Without Custom fn_selfActions.sqf
 1. Copy CCTV folder to your mission folder.
 2. Copy the custom folder.
 3. In init.sqf change the following line `call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";` to `call compile preprocessFileLineNumbers "custom\compiles.sqf`.
+4. Open up cctv\init.sqf to edit the config.
 
 ### With Custom fn_selfActions.sqf
 1. Copy CCTV folder to your mission folder.
@@ -50,6 +51,7 @@ if(dayz_tameDogs) then {
 };
 ```
 And add after the last `};`
+4. Open up cctv\init.sqf to edit the config.
 
 ```
 /////////////////////////////
@@ -93,3 +95,13 @@ The script only needs 1 filter exception. Although this exception will probably 
 ```
 5 SetCamUseTi !"\"SetCamUseTi\"," !"cctv\init.sqf","
 ```
+
+### Adding Cameras
+
+The script uses 2 models to calculate where the CCTV should be.
+
+Notebooks are used to activate the system. In the editor they are found at __Object (small) -> Notebook__
+[logo]: https://dl.dropboxusercontent.com/u/135243/Dump/notebook.jpg "Notebook"
+
+Loudspeaks are used as camera points. In the editor they are found at __Object (small) -> Loudspeaker__
+[logo]: https://dl.dropboxusercontent.com/u/135243/Dump/loudspeaker.jpg "Loudspeaker"

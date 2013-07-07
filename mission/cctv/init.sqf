@@ -1,16 +1,27 @@
+/****************************************************************************
+Copyright (C) 2013 Maca134
+This program is free software under the terms of the GNU General Public License version 3.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+@authors maca134.co.uk
+@version 1.00
+@date 20130707
+*****************************************************************************/
 private ["_laptop", "_camera_objs", "_player_camera", "_get_pos", "_get_dir", "_cam", "_first_cam", "_x", "_y", "_z", "_cam_next", "_cam_rotateplus", "_cam_rotateminus", "_cam_quit", "_loop", "_cam_i", "_cams_n", "_inc", "_next_cam", "_dir", "_nv"];
 
-CCTV_pan_angle = 45;
-CCTV_tilt_angle = 15;
-CCTV_time_int = 3;
+CCTV_pan_angle = 45; // Angle the camera moves left to right
+CCTV_tilt_angle = 15; // Angle the camera is tilted down
+CCTV_time_int = 3; // Time the camera holds
+CCTV_radius = 500; // Radius which notebooks detect cameras
 
+// END OF CONFIG
 CCTV_NEXT = true;
 CCTV_QUIT = false;
 CCTV_NV = false;
 CCTV_TER = false;
 
 _laptop = _this select 3;
-_camera_objs = nearestObjects [_laptop, ["Loudspeaker"], 500];
+_camera_objs = nearestObjects [_laptop, ["Loudspeaker"], CCTV_radius];
 _player_camera = cameraView;
 
 if ((count _camera_objs) < 1) exitWith {
