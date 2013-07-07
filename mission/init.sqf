@@ -55,6 +55,11 @@ if ((!isServer) && (player != player)) then
 if (isServer) then {
 	call compile preprocessFileLineNumbers "dynamic_vehicle.sqf";				//Compile vehicle configs
 	
+	/////////////////////////////
+	// CCTV Custom self actions
+	_nil = [] execVM "custom\neafcctv.sqf";
+	/////////////////////////////
+	
 	// Add trader citys
 	_nil = [] execVM "mission.sqf";
 	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";

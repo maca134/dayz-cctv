@@ -16,8 +16,11 @@ if (!isDedicated) then {
 	fnc_inAngleSector =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_inAngleSector.sqf";		//Checks which actions for nearby casualty
 	
 
+	/////////////////////////////
+	// CCTV Custom self actions
 	// Change selfaction to custom file
 	fnc_usec_selfActions =		compile preprocessFileLineNumbers "custom\fn_selfActions.sqf";		//Checks which actions for self
+	/////////////////////////////
 	
 
 	fnc_usec_unconscious =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_unconscious.sqf";
