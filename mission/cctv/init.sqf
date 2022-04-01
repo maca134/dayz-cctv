@@ -32,7 +32,7 @@ if ((count _camera_objs) < 1) exitWith {
 _cam_span_targets = {
 	private ["_obj", "_pos", "_dir", "_pos1", "_pos2", "_return", "_x", "_y", "_z"];
 	_obj = _this select 0;
-	_pos = getPos _obj;
+	_pos = getPosATL _obj;
 	_dir = [_obj] call _get_dir;
 	_x = _pos select 0;
 	_y = _pos select 1;
@@ -46,7 +46,7 @@ _cam_span_targets = {
 _get_pos = {
 	private ["_obj", "_pos", "_dir", "_x", "_y", "_z"];
 	_obj = _this select 0;
-	_pos = getPos _obj;
+	_pos = getPosATL _obj;
 	_dir = ([_obj] call _get_dir) + 180;
 	if (_dir < 0.0) then {
 		_dir = _dir + 360.0;
